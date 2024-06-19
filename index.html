@@ -26,16 +26,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
-            h1{
+            .roboslab {
                 font-family: "Roboto Slab", serif;
                 font-optical-sizing: auto;
-                font-weight: 400;
+                font-weight: 500;
                 font-style: normal;
             }
 
@@ -52,6 +52,13 @@
             .w3-bar .w3-button{
                 padding: 20px;
             }
+
+            .bgimg-1 {
+                background-position: center;
+                background-size: cover;
+                background-image: url("./images/sample/bg1.jpg");
+                min-height: 100%;
+            }
         </style>
     </head>
 
@@ -60,7 +67,7 @@
         <!--Tabs: Home, Our team, Donate, Contact Us-->
         <div class="w3-top">
             <div class="w3-bar w3-white w3-card" id="navbar">
-                <a href="/index.html" class="w3-bar-item w3-button w3-wide">Community Canvas</a>
+                <a href="index.html" class="w3-bar-item w3-button roboslab">Community Canvas</a>
                 <div class="w3-right w3-hide-small">
                     <a href="about.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i>  ABOUT US</a>
                     <a href="donate.html" class="w3-bar-item w3-button"><i class="fa fa-money"></i>  DONATE</a>
@@ -73,12 +80,22 @@
             </div>
         </div>
         
+        <!--Chotu navbar (small screens)-->
         <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display: none;" id="sidebar">
-            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close x</a>
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close</a>
             <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
             <a href="donate.html" onclick="w3_close()" class="w3-bar-item w3-button">DONATE</a>
             <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
-        </nav>
+        </nav>      
+
+        <header class="bgimg-1 w3-display-container w3-grayscale-min">
+            <div class="w3-display-left w3-text-gray" style="padding:48px;">
+                <span class="w3-jumbo w3-hide-small roboslab">Community Canvas</span><br>
+                <span class="w3-xxlarge w3-hide-large w3-hide-medium roboslab">Community Canvas</span><br>
+                <span class="w3-large">Empowering and uplifting society through education, communication, and social development</span>
+                <p><a href="donate.html" class="w3-button w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Help us make a change</a></p>
+            </div>
+        </header>
 
     <script>
         var mySidebar = document.getElementById("sidebar");
